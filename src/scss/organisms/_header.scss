@@ -1,13 +1,17 @@
 @use '../abstracts/' as *;
+@use '../breakpoints'as *;
 @use 'sass:math';
 
 header {
   display: grid;
   grid-column: 1 / -1;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: auto 1fr auto;
   grid-row: 1 / 1;
-  .container {
-    border: 1px solid red;
-    padding: math.div($default-padding, 2);
+  #title {
+    cursor: pointer;
+    grid-column: 1 / 1;
+  }
+  #user {
+    grid-column: 3 / -1;
   }
 }

@@ -18,4 +18,8 @@
   min-height: 100vh;
   overflow-x: hidden;
   padding: math.div($default-padding, 2);
+  .container {
+    padding: math.div($default-padding, 2);
+    @include flexbox-column-center;
+  }
 }

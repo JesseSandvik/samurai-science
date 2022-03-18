@@ -1,4 +1,6 @@
 @use 'global';
+@use 'breakpoints';
 @use './abstracts';
+@use './atoms';
 @use './organisms';
 @use 'layout';
