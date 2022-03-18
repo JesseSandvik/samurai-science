@@ -10,11 +10,10 @@ button {
   border: $default-border-width solid $secondary;
   border-radius: $default-border-radius;
   cursor: pointer;
-  font-weight: bold;
   letter-spacing: $default-letter-spacing;
   padding: math.div($default-padding, 4) math.div($default-padding, 2);
   text-transform: capitalize;
   &:hover {
-    opacity: 0.9;
+    border: $default-border-width solid $accent;
   }
 }

@@ -1,5 +1,11 @@
+@use '../abstracts/' as *;
+@use 'sass:math';
+
 main {
+  border: 1px solid red;
   display: grid;
   grid-column: 1 / -1;
+  grid-template-columns: auto 1fr auto;
   grid-row: 2 / 2;
+  padding: math.div($default-padding, 2);
 }
