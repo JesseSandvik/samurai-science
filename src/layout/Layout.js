@@ -5,10 +5,10 @@ import Footer from '../organisms/footer/Footer';
 import Header from '../organisms/header/Header';
 import Main from '../organisms/main/Main';
 
-const Layout = () => {
+const Layout = ({appData}) => {
   return (
     <div className="layout">
-      <Header />
+      <Header appData={appData} />
       <Main>
         <Routes>
           {pageRoutes.map((route, index) => (
@@ -16,7 +16,7 @@ const Layout = () => {
           ))}
         </Routes>
       </Main>
-      <Footer />
+      <Footer appData={appData} />
     </div>
   );
 };

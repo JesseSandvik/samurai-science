@@ -1,8 +1,10 @@
-const Footer = () => {
+const Footer = ({appData}) => {
   return (
     <footer>
       <div id="copyright" className="container">
-        <p>&copy; jessesandvik {new Date().getFullYear()}</p>
+        <p>
+          &copy; {appData.copyright} {new Date().getFullYear()}
+        </p>
       </div>
     </footer>
   );

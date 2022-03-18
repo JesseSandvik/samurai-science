@@ -10,8 +10,15 @@ header {
   #title {
     cursor: pointer;
     grid-column: 1 / 1;
+    text-transform: capitalize;
+    i {
+      padding: math.div($default-padding, 2);
+    }
   }
   #user {
     grid-column: 3 / -1;
+    &::first-letter {
+      text-transform: capitalize;
+    }
   }
 }
