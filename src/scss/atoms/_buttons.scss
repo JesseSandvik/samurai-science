@@ -13,7 +13,9 @@ button {
   letter-spacing: $default-letter-spacing;
   padding: math.div($default-padding, 4) math.div($default-padding, 2);
   text-transform: capitalize;
+  @include transition-ease;
   &:hover {
     border: $default-border-width solid $accent;
+    opacity: 0.9;
   }
 }

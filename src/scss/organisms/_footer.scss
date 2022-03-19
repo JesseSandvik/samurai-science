@@ -2,10 +2,15 @@
 @use 'sass:math';
 
 footer {
+  bottom: 0;
   display: grid;
   grid-column: 1 / -1;
   grid-template-columns: auto 1fr auto;
   grid-row: 3 / -1;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1;
   #copyright {
     grid-column: 2 / 2;
   }

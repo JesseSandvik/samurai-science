@@ -6,6 +6,11 @@
 }
 
 body {
+  background: linear-gradient(80deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0), black), url("../images/neon-orbs.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Raleway", sans-serif;
   font-size: 0.8rem;
 }
@@ -17,6 +22,29 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+#parallax {
+  background: transparent;
+  color: #f2f2f2;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  height: 90px;
+  position: sticky;
+  right: 0;
+  top: 0;
+  z-index: 3;
+}
+#parallax #user {
+  align-items: center;
+  color: #f2f2f2;
+  display: flex;
+  grid-column: 3/-1;
+  padding: 0 1rem;
+  z-index: 3;
+}
+#parallax #user::first-letter {
+  text-transform: capitalize;
 }
 
 button {
@@ -31,40 +59,53 @@ button {
   letter-spacing: 0.08rem;
   padding: 0.25rem 0.5rem;
   text-transform: capitalize;
+  transition: 0.5s ease-in-out;
 }
 .btn:hover {
   border: 3px solid #7f2ccb;
+  opacity: 0.9;
 }
 
 footer {
+  bottom: 0;
   display: grid;
   grid-column: 1/-1;
   grid-template-columns: auto 1fr auto;
   grid-row: 3/-1;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 1;
 }
 footer #copyright {
   grid-column: 2/2;
 }
 
 header {
+  background: #000;
+  color: #f2f2f2;
   display: grid;
   grid-column: 1/-1;
   grid-template-columns: auto 1fr auto;
   grid-row: 1/1;
+  height: 90px;
+  left: 0;
+  margin-top: 65vh;
+  padding: 1rem;
+  position: sticky;
+  right: 0;
+  top: 0;
+  z-index: 2;
 }
 header #title {
   cursor: pointer;
+  font-size: 1rem;
   grid-column: 1/1;
   text-transform: capitalize;
+  text-align: center;
 }
 header #title i {
   padding: 0.5rem;
-}
-header #user {
-  grid-column: 3/-1;
-}
-header #user::first-letter {
-  text-transform: capitalize;
 }
 
 main {
@@ -76,13 +117,17 @@ main {
 }
 
 .layout {
-  background: linear-gradient(100deg, black, black, black, #2f2f2f, #2f2f2f, #2f2f2f, #2f2f2f, #2f2f2f, #2f2f2f, black, black);
+  background: linear-gradient(80deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  border-radius: 4px;
   color: #f2f2f2;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  margin-top: 35vh;
   min-height: 100vh;
   overflow-x: hidden;
   padding: 0.5rem;
+  position: sticky;
+  z-index: 1;
 }
 .layout .container {
   padding: 0.5rem;
@@ -121,9 +166,6 @@ main {
 #homepage p {
   font-size: 1.2rem;
   padding: 2rem;
-}
-#homepage p::first-letter {
-  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=styles.css.map */

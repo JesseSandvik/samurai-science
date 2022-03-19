@@ -15,3 +15,7 @@
   justify-content: center;
   text-align: center;
 }
+
+@mixin transition-ease {
+  transition: 0.5s ease-in-out;
+}

@@ -2,25 +2,24 @@
 @use 'sass:math';
 
 .layout {
-  background: linear-gradient(100deg,
-    rgba(#000, 1.0),
-    rgba(#000, 1.0),
-    rgba(#000, 1.0),
-    rgba($primary, 1.0),
-    rgba($primary, 1.0),
-    rgba($primary, 1.0),
-    rgba($primary, 1.0),
-    rgba($primary, 1.0),
-    rgba($primary, 1.0),
-    rgba(#000, 1.0),
-    rgba(#000, 1.0),
+  background: linear-gradient(80deg,
+    rgba(#000, 0.2),
+    rgba(#000, 0.2),
+    rgba(#000, 0.6),
+    rgba(#000, 0.6),
+    rgba(#000, 0.5),
+    rgba(#000, 0.5),
   );
+  border-radius: $default-border-radius;
   color: $secondary;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  margin-top: 35vh;
   min-height: 100vh;
   overflow-x: hidden;
   padding: math.div($default-padding, 2);
+  position: sticky;
+  z-index: 1;
   .container {
     padding: math.div($default-padding, 2);
     @include flexbox-column-center;

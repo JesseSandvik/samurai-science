@@ -1,7 +1,6 @@
 import {faCrow} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-import AuthButtonToggle from '../../molecules/AuthButtonToggle';
 import NavigationLink from '../../atoms/NavigationLink';
 
 const Header = ({appData}) => {
@@ -16,9 +15,6 @@ const Header = ({appData}) => {
           <small>{appData.phrase}</small>
         </div>
       </NavigationLink>
-      <div id="user" className="container">
-        <AuthButtonToggle />
-      </div>
     </header>
   );
 };
