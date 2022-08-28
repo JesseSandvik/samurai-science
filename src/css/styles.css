@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../images/SamuraiScienceWarriorFocus.png");
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: Quicksand, sans-serif;
+  overflow-x: hidden;
+}
+body h1 {
+  margin: 0;
+}
+body ul {
+  list-style: none;
+}
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.App {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+.App header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr 1fr;
+  left: 0;
+  position: sticky;
+  right: 0;
+  text-transform: capitalize;
+  top: 0;
+}
+.App header > .container {
+  background: #7e261e;
+  color: #f1f1f1;
+  display: flex;
+}
+.App header > .container nav {
+  width: 100%;
+}
+.App header > .container nav ul {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly;
+}
+.App header > .container nav ul a {
+  font-weight: bold;
+  padding-bottom: 0.25rem;
+}
+.App header > .container:first-child, .App header > .container:last-child {
+  border-bottom: 5px solid #7e261e;
+  padding: 1rem;
+}
+.App header > .container:nth-child(2) {
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  grid-column: 2/2;
+  grid-row: 1/-1;
+}
+.App header > .container:last-child ul {
+  justify-content: flex-end;
+  padding: 0 2rem;
+}
+.App header #title {
+  align-items: center;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  color: #1f1f1f;
+  cursor: pointer;
+  flex-direction: column;
+  grid-row: 1/-1;
+  justify-content: center;
+  text-align: center;
+}
+.App header #title img {
+  border-radius: 50%;
+  max-width: 100%;
+}
+.App footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+#home {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  max-height: 77vh;
+  padding: 2rem;
+  margin: 1rem 4rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

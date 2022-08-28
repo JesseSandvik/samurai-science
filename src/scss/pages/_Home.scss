@@ -1,0 +1,12 @@
+@use "../settings/" as *;
+@use "sass:math";
+
+#home {
+    display: grid;
+    gap: $grid-gap * 2;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    max-height: 77vh;
+    padding: $padding * 2;
+    margin: $margin $margin * 4;
+}

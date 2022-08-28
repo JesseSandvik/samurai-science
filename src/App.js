@@ -1,23 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, useNavigate } from "react-router-dom";
+
+import Footer from "./components/organisms/footer/Footer";
+import Header from "./components/organisms/header/Header";
+import Image from "./components/atoms/image/Image";
+import Navigation from "./components/molecules/navigation/Navigation";
+import NavigationLink from "./components/atoms/navLink/NavLink";
+
+import SamuraiScienceLogo from "./images/samurai-logo.png";
+
+import { routes } from "./app/routes";
 
 function App() {
+  const navigate = useNavigate();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header>
+        <div className="container">
+          <Navigation>
+            <li>
+              <NavigationLink to="/">home</NavigationLink>
+            </li>
+            <li>
+              <NavigationLink to="/about">about us</NavigationLink>
+            </li>
+            <li>
+              <NavigationLink to="/shop">shop</NavigationLink>
+            </li>
+            <li>
+              <NavigationLink to="/find-retailer">find retailer</NavigationLink>
+            </li>
+          </Navigation>
+        </div>
+        <div className="container">
+          <div id="title">
+            <Image alt="Samurai Science Logo" src={SamuraiScienceLogo} />
+          </div>
+        </div>
+        <div className="container">
+          <Navigation>
+            <li>
+              <NavigationLink to="/cart">cart(0)</NavigationLink>
+            </li>
+          </Navigation>
+        </div>
+      </Header>
+      <Routes>
+        {routes.map(({ element, name, path }) => (
+          <Route key={name} path={path} element={element} />
+        ))}
+      </Routes>
+      <Footer>
+        <small>&copy;{new Date().getFullYear()} samuraiscience.com</small>
+      </Footer>
     </div>
   );
 }
