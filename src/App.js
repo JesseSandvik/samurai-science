@@ -28,7 +28,7 @@ function App() {
               <NavigationLink to="/shop">shop</NavigationLink>
             </li>
             <li>
-              <NavigationLink to="/find-retailer">find retailer</NavigationLink>
+              <NavigationLink to="/find-retailer">retailers</NavigationLink>
             </li>
           </Navigation>
         </div>
